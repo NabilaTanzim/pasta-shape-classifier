@@ -1,10 +1,10 @@
 # pasta-shape-classifier
 A model built using ResNet18 to classify different pasta shapes
 
-# Overview
+## Overview
 This is a basic image classifier project for learning purpose. It identifies pasta shapes (penne, fusilli, farfalle, etc.) from photos, built by fine-tuning a pretrained ResNet18 on the Pasta Shape Dataset.
 
-# What's inside
+## What's inside
 - Data loading — Downloads the dataset via kagglehub, explores the (nested) folder structure, and previews a sample image from each pasta class.
 - A "safe" dataset loader — Some images in the raw dataset are corrupted; SafeImageFolder verifies every file up front and skips the bad ones instead of crashing mid-training.  
 - Three training runs, each building on the last:
@@ -26,17 +26,17 @@ Sample inference on a farfalle pasta
 Grad-CAM: model attention on the pasta, not the background
 
 
-# Requirements
+## Requirements
 ```bash
 pip install torch torchvision numpy pandas matplotlib scikit-learn tqdm kagglehub grad-cam opencv-python pillow
 ```
-# Usage
+## Usage
 1. Open pasta-vision.ipynb in Jupyter or Colab.
 2. Run the cells top to bottom — the dataset downloads automatically via kagglehub on first run.
 3. Each "RUN" section trains and saves its own checkpoint (best_model_run1.pth, run2, run3), so you can skip straight to Run 3 if you just want the best model.
 4. To classify your own photo, drop an image into the working directory, update img_path in the inference cell, and re-run it.
 
-# Results
+## Results
 | Run | Approach | Notes | Test Accuracy |
 |---|---|---|---|
 | 1 | Full fine-tune, no augmentation| Baseline | 70.5% |
@@ -80,7 +80,7 @@ Shapes with the most spread-out row (getting predicted as several different thin
 ### Takeaways
 - The three cleanest classes (tortellini, orecchiette, cannelloni) share a trait: they're all fairly distinctive 3D/folded shapes rather than long strands — long-strand pastas (spaghetti, linguine, fettuccine, bucatini, rotini) are your harder cluster overall
 
-# Acknowledgments
+## Acknowledgments
 - Dataset: Pasta Shape Dataset by Zibran Zarif on Kaggle.
 - Model: ResNet18 pretrained on ImageNet, via torchvision.
 
