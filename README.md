@@ -13,7 +13,18 @@ This is a basic image classifier project for learning purpose. It identifies pas
   - Run 3 — Freezes all layers except layer4 and the final classifier head, refines augmentation, and trains for more epochs.
 - Evaluation — Test-set accuracy after each run, plus a confusion matrix over all classes for the final model.
 - Inference — Loads a single image and gets the model's top-3 predicted pasta shapes with confidence scores.
+
+ <img width="759" height="607" alt="image" src="https://github.com/user-attachments/assets/fa3422d7-3c6a-4063-ab2c-56c5bcfdb1f8" />        
+ 
+Sample inference on a farfalle pasta
+
+ 
 - Explainability — Grad-CAM heatmaps showing which regions of an image drove the model's prediction.
+  
+<img width="696" height="697" alt="image" src="https://github.com/user-attachments/assets/76538c57-df6d-4969-8df9-63ce21156ea7" /> 
+
+Grad-CAM: model attention on the pasta, not the background
+
 
 # Requirements
 ```bash
