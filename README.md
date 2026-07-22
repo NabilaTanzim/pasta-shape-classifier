@@ -32,7 +32,7 @@ pip install torch torchvision numpy pandas matplotlib scikit-learn tqdm kagglehu
 ```
 ## Usage
 1. Open pasta-vision.ipynb in Jupyter or Colab.
-2. Run the cells top to bottom — the dataset downloads automatically via kagglehub on first run.
+2. Run the cells top to bottom. The dataset downloads automatically via kagglehub on first run.
 3. Each "RUN" section trains and saves its own checkpoint (best_model_run1.pth, run2, run3), so you can skip straight to Run 3 if you just want the best model.
 4. To classify your own photo, drop an image into the working directory, update img_path in the inference cell, and re-run it.
 
@@ -52,7 +52,7 @@ pip install torch torchvision numpy pandas matplotlib scikit-learn tqdm kagglehu
 
 | True shape | Confused with | Roughly how often | Likely reason |
 |---|---|---|---|
-| rotini | fusili | 14 (Highest) | oth are twisted pasta sahpes with ridges |
+| rotini | fusili | 14 (Highest) | both are twisted pasta sahpes with ridges |
 | fettuccine | linguine | 10  | both long straight strand pastas |
 | tagliatelle | fettuccine | 9  | both long straight strand pastas |
 | fettuccine | tagliatelle | 8  | both long straight strand pastas |
@@ -78,7 +78,7 @@ Shapes with the most spread-out row (getting predicted as several different thin
 -  Confusion is mostly between visually similar shapes as expected.  
 
 ### Takeaways
-- The three cleanest classes (tortellini, orecchiette, cannelloni) share a trait: they're all fairly distinctive 3D/folded shapes rather than long strands — long-strand pastas (spaghetti, linguine, fettuccine, bucatini, rotini) are your harder cluster overall
+- The three cleanest classes (tortellini, orecchiette, cannelloni) share a trait: they're all fairly distinctive 3D/folded shapes rather than long strands. The long-strand pastas (spaghetti, linguine, fettuccine, bucatini, rotini) are the harder cluster overall.
 
 ## Acknowledgments
 - Dataset: Pasta Shape Dataset by Zibran Zarif on Kaggle.
